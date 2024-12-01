@@ -1,6 +1,6 @@
-export JAVA_9=/usr/lib/jvm/java-9-oracle
-export JAVA_11=/usr/lib/jvm/java-11-openjdk-amd64
-export JAVA_15=/opt/jdk-15
+export JAVA_9=/usr/lib/jvm/java-9-openjdk-amd64
+export JAVA_11=/usr/local/openjdk-11
+export JAVA_15=/usr/local/openjdk-15
 
 export JAVA_HOME=$JAVA_9
 export PATH=$JAVA_HOME/bin:$PATH
@@ -90,5 +90,5 @@ cp build/artifacts/jdk1.5/jars/$jarName module.tmp/$jarName
 )
 cp module.tmp/$jarName build/artifacts/jdk1.5/jars/$jarName
 
-bcsign-oracle build/artifacts/jdk1.5/jars/$jarName
+#bcsign-oracle build/artifacts/jdk1.5/jars/$jarName
 done

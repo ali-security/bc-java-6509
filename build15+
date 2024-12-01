@@ -8,7 +8,7 @@
 
 if [ "${JDKPATH}" = "" ] 
 then
-	JDKPATH=/usr/lib/jvm/java-8-openjdk-amd64
+	JDKPATH=/usr/local/openjdk-8
 fi
 
 JAVA_HOME=$JDKPATH
@@ -31,7 +31,7 @@ else
     fi
 fi
 
-if [ -f build/artifacts/jdk1.5/jars/bcprov-jdk15on*.jar ]
+if [ -f build/artifacts/jdk1.5/jars/bcprov-jdk15on*.jar ];
 then
 	tar cf - prov/src/main/resources/META-INF | (cd build/artifacts/jdk1.5/jars/; tar xf -)
         cd build/artifacts/jdk1.5/jars/
